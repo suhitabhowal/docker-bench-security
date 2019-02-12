@@ -27,7 +27,7 @@
                 }
             }  
     }
-      
+  /*    
      stage('Run Dockerbench image'){  
       steps {
                 script {
@@ -44,6 +44,7 @@
             }  
       
         }
+        */
             
         stage('Push docker image'){
            
