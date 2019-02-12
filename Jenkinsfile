@@ -12,6 +12,13 @@
             }
         }    
         
+       stage('Perform Sonarqube analysis')
+        {
+                     steps   {
+
+                                sh "mvn sonar:sonar -Dsonar.host.url=http://54.185.178.109:30002"
+                        }
+        }
         
         
     
@@ -61,7 +68,19 @@
       
         }
       
-      stage('Run ZAP scan'){  
+       stage('Deploy kubernetes'){
+          
+          steps {
+           kubernetesDeploy(
+                kubeconfigId: 'kubeconfig',
+                configs: 'application.yaml',
+                enableConfigSubstitution: true)
+                echo 'App url: http://54.185.178.109:30005/app'
+          }
+                     
+        }    
+      
+       stage('Run ZAP scan'){  
          steps {
                 script {
                     
@@ -76,26 +95,5 @@
             }  
       
         }
-   /*
-      stage('Perform Sonarqube analysis')
-        {
-                     steps   {
-
-                                sh "mvn sonar:sonar -Dsonar.host.url=http://54.185.178.109:30002"
-                        }
-        }
-*/
-      
-        stage('Deploy kubernetes'){
-          
-          steps {
-           kubernetesDeploy(
-                kubeconfigId: 'kubeconfig',
-                configs: 'application.yaml',
-                enableConfigSubstitution: true)
-                echo 'App url: http://54.185.178.109:30005/app'
-          }
-                     
-        }    
     }
 }
