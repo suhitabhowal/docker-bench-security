@@ -57,7 +57,7 @@
                 }
             }
         }
-        
+   /*     
       stage('Perform Sonarqube analysis')
         {
                      steps   {
@@ -65,7 +65,7 @@
                                 sh "mvn sonar:sonar -Dsonar.host.url=http://54.185.178.109:30002"
                         }
         }
-
+*/
       
         stage('Deploy kubernetes'){
           
