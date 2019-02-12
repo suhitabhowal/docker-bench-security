@@ -52,13 +52,31 @@
                     -v /var/run/docker.sock:/var/run/docker.sock \
                     -v /usr/lib/systemd:/usr/lib/systemd \
                     -v /etc:/etc --label docker_bench_security \
-                    suhita/phoenix2.0'
+                    suhita/phoenix2.0 | tee DockerBenchOutput.txt'
                     
                 }
+        
+                archiveArtifacts artifacts: 'DockerBenchOutput.txt'
             }  
       
         }
-   /*     
+      
+      stage('Run ZAP scan'){  
+         steps {
+                script {
+                    
+                  sh('bash ./run-docker.sh http://54.185.178.109:30005/app > ZAPScanOutput.txt')
+                   sh('cat ZAPScanOutput.txt')
+                   sh('cat ZAPScanResults.txt')
+                  
+                                      
+                }
+          archiveArtifacts artifacts: 'ZAPScanOutput.txt'
+          archiveArtifacts artifacts: 'ZAPScanResults.txt'
+            }  
+      
+        }
+   /*
       stage('Perform Sonarqube analysis')
         {
                      steps   {
