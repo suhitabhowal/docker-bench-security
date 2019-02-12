@@ -34,7 +34,8 @@
                     -v /var/lib:/var/lib \
                     -v /var/run/docker.sock:/var/run/docker.sock \
                     -v /usr/lib/systemd:/usr/lib/systemd \
-                    -v /etc:/etc --label docker_bench_security \ phoenix2.0'
+                    -v /etc:/etc --label docker_bench_security \
+                    phoenix2.0'
                     
                 }
             }  
