@@ -10,7 +10,7 @@
                   sh "mvn -B -DskipTests clean package"
                   archiveArtifacts artifacts: 'target/app.war'
             }
-        }        
+        }    
         
         
         
@@ -25,8 +25,7 @@
                         sh 'echo $(curl localhost:80)'
                     }
                 }
-            }
-            
+            }            
         }
         
         stage('Push docker image'){
