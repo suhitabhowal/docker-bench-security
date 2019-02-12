@@ -32,7 +32,7 @@
       steps {
                 script {
                     
-             sh     'docker run -it --net host --pid host --cap-add audit_control \
+             sh     'docker run --net host --pid host --cap-add audit_control \
                    -e DOCKER_CONTENT_TRUST=$DOCKER_CONTENT_TRUST \
                     -v /var/lib:/var/lib \
                     -v /var/run/docker.sock:/var/run/docker.sock \
