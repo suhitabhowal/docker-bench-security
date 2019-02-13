@@ -20,7 +20,6 @@
                         }
         }
         
-        
     
   
     stage('Build Docker image'){
