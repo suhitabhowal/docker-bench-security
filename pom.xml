@@ -6,7 +6,7 @@
 	<artifactId>java-web-app</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>java-web-app Maven Webapp</name>
+	<name>Phoenix java-web-app</name>
 	<url>http://maven.apache.org</url>
 	<dependencies>
 		<dependency>
