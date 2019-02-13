@@ -49,7 +49,7 @@
         }
       
       
-      stage('Run Dockerbench image'){  
+      stage('Run Dockerbench Scan'){  
       steps {
                 script {
                     
