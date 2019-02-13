@@ -21,6 +21,8 @@ readonly version
 readonly this_path
 readonly myname
 
+cat $myname
+
 export PATH=$PATH:/bin:/sbin:/usr/bin:/usr/local/bin:/usr/sbin/
 
 # Check for required program(s)
