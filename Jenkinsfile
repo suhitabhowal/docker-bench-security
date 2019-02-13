@@ -74,7 +74,7 @@
                 kubeconfigId: 'kubeconfig',
                 configs: 'application.yaml',
                 enableConfigSubstitution: true)
-                echo 'App url: http://54.185.178.109:30005/app'
+                echo 'App url: http://54.190.168.185:30005/app'
           }
                      
         }    
@@ -83,7 +83,7 @@
          steps {
                 script {
                     
-                  sh('bash ./run-docker.sh http://54.185.178.109:30005/app > ZAPScanOutput.txt')
+                  sh('bash ./run-docker.sh http://54.190.168.185:30005/app > ZAPScanOutput.txt')
                    sh('cat ZAPScanOutput.txt')
                    sh('cat ZAPScanResults.txt')
                   
