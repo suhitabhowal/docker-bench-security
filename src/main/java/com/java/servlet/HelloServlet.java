@@ -37,7 +37,7 @@ public class HelloServlet extends HttpServlet {
 	}
 
 	public static Connection getCon(String jdbcUrl) {
-		
+		 
 		String url = null;
 		url = jdbcUrl;
 		if (jdbcUrl == null || jdbcUrl.isEmpty()) {
