@@ -16,7 +16,7 @@
         {
                      steps   {
 
-                                sh "mvn sonar:sonar -Dsonar.host.url=http://54.190.168.185:30025"
+                                sh "mvn sonar:sonar -Dsonar.host.url=http://54.190.168.185:30002"
                         }
         }
         
@@ -74,7 +74,7 @@
                 kubeconfigId: 'kubeconfig',
                 configs: 'application.yaml',
                 enableConfigSubstitution: true)
-                echo 'App url: http://54.190.168.185:30005/app'
+                echo 'App url: http://54.190.168.185:30006/app'
           }
                      
         }    
