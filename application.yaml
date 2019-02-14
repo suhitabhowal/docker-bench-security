@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: phoenix
-        image: suhitabhowal/phoenix2.0:latest
+        image: suhita/phoenix2.0:latest
         ports:
         - containerPort: 8080
 ---
